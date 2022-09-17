@@ -1,16 +1,45 @@
 /* home */
-@use '../abstracts/variables' as var;
-@use '../base/typography' as type;
-
 body {
-  font-family: type.$font;
-  background-color: var.$bg-very-light;
-  width: min(100% - 2rem, 60ch);
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+  font-weight: bold;
+  width: min(90vw, 600px);
+  padding: max(0.5vh, 0.5rem);
+  font-family: 'Dosis';
+  color: black;
+  background-color: darkseagreen;
   margin-inline: auto;
-  margin-block: 12rem;
 }
 
-h1 {
-  color: var.$primary-color;
-  text-align: right;
+h1,
+h2 {
+  color: #093912;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 8px double #238335;
+}
+
+.fadein img {
+  opacity: 0.5;
+  transition: 1s ease;
+}
+
+.fadein img:hover {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+.flow figcaption {
+  font-size: large;
+}
+
+:root {
+  --flow-space: 0.5rem;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
 }
