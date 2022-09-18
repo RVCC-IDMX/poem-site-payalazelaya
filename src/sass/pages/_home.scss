@@ -36,8 +36,11 @@ img {
   font-size: large;
 }
 
-a:visited {
+a:link {
   color: #0000e8;
+}
+a:visited {
+  color: #000080;
 }
 
 :root {
